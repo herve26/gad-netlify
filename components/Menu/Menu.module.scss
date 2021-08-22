@@ -1,0 +1,78 @@
+@import '../../styles/variable';
+
+$menu-items-count: 6;
+$menu-item-width: 6rem;
+$menu-items-loop-offset: $menu-items-count - 1;
+$menu-indicator-transition-speed: 1s;
+
+.menu{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+}
+
+.item{
+  display: block;
+  background-color: white;
+  box-sizing: border-box;
+  width: $menu-item-width;
+
+  &:first-child{
+    margin-left: 0;
+  }
+  
+  &:hover{
+    border-color: #8b055f;
+  }
+
+  &:last-child{
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      position: absolute;
+      width: $menu-item-width;
+      background: $primary-color;
+      top: 0;
+      bottom: calc(-1rem - 1px);
+      left: 0;
+      z-index: -1;
+      transition: left #{$menu-indicator-transition-speed} ease;
+    }
+    
+    &:hover, &.active {
+      &:after{
+        left: $menu-item-width * $menu-items-count - $menu-item-width !important;
+      }
+    }
+  }
+
+  @for $i from 1 through $menu-items-loop-offset {
+    // When the .Nav-item is active, make the indicator line up with the navigation item.
+    &:nth-child(#{$i}).active ~ &:last-child:after {
+      left:($menu-item-width*$i)-$menu-item-width;
+    }
+
+    &:nth-child(#{$i}):hover ~ &:last-child:after {
+      left:($menu-item-width*$i)-$menu-item-width !important;
+    }
+  }
+
+  a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+
+.active{
+  border-color: #8b055f;
+}
