@@ -1,20 +1,10 @@
-@import '../../styles/variable';
+@import '../../../styles/variable';
+
 
 $menu-items-count: 6;
 $menu-item-width: 6rem;
 $menu-items-loop-offset: $menu-items-count - 1;
 $menu-indicator-transition-speed: 1s;
-
-.menu{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  flex-direction: row;
-
-  position: relative;
-}
 
 .item{
   display: block;
