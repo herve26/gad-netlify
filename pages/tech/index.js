@@ -1,9 +1,9 @@
-import Header from '@components/Header';
+import { Header } from "@components/Organisms";
 
-export default function Tech(){
+export default function Tech() {
   return (
     <>
-      <Header/>
+      <Header />
     </>
-  )
+  );
 }

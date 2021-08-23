@@ -2,6 +2,8 @@ import Head from "next/head";
 
 import { Header } from "@components/Organisms";
 import { Main, Section, Hero } from "@components/Molecules";
+import { Button } from "@components/Atoms";
+
 import Footer from "@components/Footer";
 
 import styles from "./Home.module.scss";
@@ -40,6 +42,10 @@ export default function Home() {
               <br />
               <span>And a better World</span>
             </h3>
+            <div className={styles.button_container}>
+              <Button>Rejounez Nous</Button>
+              <Button alt>Savoir Plus</Button>
+            </div>
           </Hero>
         </Section>
       </Main>
