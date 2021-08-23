@@ -1,0 +1,32 @@
+@import '../styles/variable';
+
+.hero_text_main{
+  font-size: 72px; 
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero_text_side{
+  margin-top: 36px;
+  padding-bottom: 10px;
+  border-bottom: .8rem solid $primary-color;
+
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero_text_block{
+  display: inline-block;
+  
+}
+
+.hero_bg{
+  background-color: $primary-color;
+  line-height: 70px;
+  height: 76px;
+  padding: 0 3px;
+}
+
+.button_container{
+  margin-top: 36px;
+}

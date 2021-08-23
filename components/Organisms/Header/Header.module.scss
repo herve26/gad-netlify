@@ -1,0 +1,20 @@
+@import '../../../styles/variable';
+
+.header{
+  padding: 1rem 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo{
+  float: left;
+  padding: 8px 0;
+}
+
+.nav{
+  float: right;
+  margin-left: auto;
+}
